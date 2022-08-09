@@ -4,6 +4,7 @@ import questions from "../data";
 
 const initialState = {
   questions,
+  currentQuestionIndex: 0,
 };
 
 const reducer = (state, action) => {
