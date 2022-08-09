@@ -1,7 +1,10 @@
 import { useReducer } from "react";
 import { createContext } from "react";
+import questions from "../data";
 
-const initialState = {};
+const initialState = {
+  questions,
+};
 
 const reducer = (state, action) => {
   return state;
