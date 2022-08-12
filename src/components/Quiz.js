@@ -7,17 +7,22 @@ const Quiz = () => {
   console.log("quizState", quizState);
   return (
     <div className="quiz">
-      <div className="score">
-        Question {quizState.currentQuestionIndex + 1} /{" "}
-        {quizState.questions.length}
-      </div>
-      <Question />
-      <div
-        className="next-button"
-        onClick={() => dispatch({ type: "NEXT_QUESTION" })}
-      >
-        Next question
-      </div>
+      {quizState.showResults && <div>Showing results</div>}
+      {!quizState.showResults && (
+        <div>
+          <div className="score">
+            Question {quizState.currentQuestionIndex + 1} /
+            {quizState.questions.length}
+          </div>
+          <Question />
+          <div
+            className="next-button"
+            onClick={() => dispatch({ type: "NEXT_QUESTION" })}
+          >
+            Next question
+          </div>
+        </div>
+      )}
     </div>
   );
 };
