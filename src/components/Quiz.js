@@ -12,6 +12,12 @@ const Quiz = () => {
         {quizState.questions.length}
       </div>
       <Question />
+      <div
+        className="next-button"
+        onClick={() => dispatch({ type: "NEXT_QUESTION" })}
+      >
+        Next question
+      </div>
     </div>
   );
 };
