@@ -16,6 +16,12 @@ const Quiz = () => {
               You`ve got {quizState.correctAnswerCount} of{" "}
               {quizState.questions.length} right.
             </div>
+            <div
+              className="next-button"
+              onClick={() => dispatch({ type: "RESTART" })}
+            >
+              Restart
+            </div>
           </div>
         </div>
       )}
