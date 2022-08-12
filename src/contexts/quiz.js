@@ -4,8 +4,9 @@ import questions from "../data";
 
 const initialState = {
   questions,
-  currentQuestionIndex: 0,
+  currentQuestionIndex: 7,
   showResults: false,
+  correctAnswerCount: 0,
 };
 
 const reducer = (state, action) => {

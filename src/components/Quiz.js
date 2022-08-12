@@ -7,7 +7,18 @@ const Quiz = () => {
   console.log("quizState", quizState);
   return (
     <div className="quiz">
-      {quizState.showResults && <div>Showing results</div>}
+      {quizState.showResults && (
+        <div className="results">
+          <div className="congratulations">Congratulations!</div>
+          <div className="results-info">
+            <div>You have completed the quiz.</div>
+            <div>
+              You`ve got {quizState.correctAnswerCount} of{" "}
+              {quizState.questions.length} right.
+            </div>
+          </div>
+        </div>
+      )}
       {!quizState.showResults && (
         <div>
           <div className="score">
