@@ -10,7 +10,7 @@ const Question = () => {
       <div className="question">{currentQuestion.question}</div>
       <div className="answers">
         {quizState.answers.map((answer, index) => (
-          <Answer key={index} answerText={answer} />
+          <Answer key={index} answerText={answer} index={index} />
         ))}
       </div>
     </div>
