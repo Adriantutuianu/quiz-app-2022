@@ -1,5 +1,9 @@
-const Answer = () => {
-  return <div>Answer</div>;
+const Answer = ({ answerText }) => {
+  return (
+    <div className="answer">
+      <div className="answer-text">{answerText}</div>
+    </div>
+  );
 };
 
 export default Answer;
